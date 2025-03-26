@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rwanda信用体系平台</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="borrow-goods.html">借货</a></li>
+                <li><a href="borrow-money.html">借款</a></li>
+                <li><a href="customer-service.html">客服</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <header>
+            <div class="container">
+                <h1>Rwanda信用体系平台</h1>
+            </div>
+        </header>
+
+        <section id="hero">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <a href="platform-guide.html">
+                            <img src="images/guide.jpg" alt="平台使用办法">
+                            <div class="carousel-caption">
+                                <h3>平台使用办法</h3>
+                                <p>了解如何高效使用我们的信用平台</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="bank-services.html">
+                            <img src="images/bank.jpg" alt="银行">
+                            <div class="carousel-caption">
+                                <h3>银行</h3>
+                                <p>探索与银行相关的信用服务</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="insurance-services.html">
+                            <img src="images/insurance.jpg" alt="保险">
+                            <div class="carousel-caption">
+                                <h3>保险</h3>
+                                <p>了解信用如何影响您的保险服务</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="legal-services.html">
+                            <img src="images/lawyer.jpg" alt="律师">
+                            <div class="carousel-caption">
+                                <h3>律师</h3>
+                                <p>获取专业的法律咨询和信用相关服务</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>关于我们</h2>
+                <p>Rwanda信用体系平台是一个由政府支持的非营利组织，旨在建立和完善Rwanda的信用体系。我们通过先进的技术和严格的标准，为个人和企业提供公正、透明的信用评估服务。</p>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>我们的服务</h2>
+                <div class="services-grid">
+                    <div class="service">
+                        <h3>信用报告</h3>
+                        <p>获取详细的信用报告，了解您的信用状况。</p>
+                    </div>
+                    <div class="service">
+                        <h3>信用咨询</h3>
+                        <p>我们的专家团队为您提供专业的信用咨询服务。</p>
+                    </div>
+                    <div class="service">
+                        <h3>信用教育</h3>
+                        <p>通过我们的教育项目，提升您的信用管理能力。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>联系我们</h2>
+                <p>如果您有任何问题或需要帮助，请随时联系我们。</p>
+                <form>
+                    <input type="text" placeholder="您的姓名" required>
+                    <input type="email" placeholder="您的邮箱" required>
+                    <textarea placeholder="您的留言" required></textarea>
+                    <button type="submit">发送</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script>
+        // 在首页添加检查登录状态的代码
+        document.addEventListener('DOMContentLoaded', function() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            if (!isLoggedIn) {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+</body>
+</html> 
