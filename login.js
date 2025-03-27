@@ -1,11 +1,25 @@
+// 生成验证码
+function generateCaptcha() {
+    const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    let captcha = '';
+    for (let i = 0; i < 4; i++) {
+        captcha += chars[Math.floor(Math.random() * chars.length)];
+    }
+    document.getElementById('captchaDisplay').textContent = captcha;
+}
+
+// 页面加载时生成验证码
+window.onload = generateCaptcha;
+
+// 处理登录表单提交
 document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+    e.preventDefault(); // 阻止表单默认提交
     
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     const captcha = document.getElementById('captcha').value;
     
-    // 这里可以添加你的验证逻辑
+    // 验证逻辑
     if (username && password && captcha === document.getElementById('captchaDisplay').textContent) {
         // 存储登录状态
         localStorage.setItem('isLoggedIn', 'true');
