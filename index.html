@@ -14,7 +14,7 @@
                 <li><a href="borrow-goods.html">借货</a></li>
                 <li><a href="borrow-money.html">借款</a></li>
                 <li><a href="customer-service.html">客服</a></li>
-                <li><a href="login.html" class="logout-link">退出登录</a></li>
+                <li><a href="login.html" class="logout-link" onclick="logout()">退出登录</a></li>
             </ul>
         </nav>
     </div>
@@ -95,13 +95,21 @@
         </section>
     </div>
     <script>
-        // 在首页添加检查登录状态的代码
-        document.addEventListener('DOMContentLoaded', function() {
-            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-            if (!isLoggedIn) {
+        // 检查登录状态
+        function checkLogin() {
+            if (!localStorage.getItem('isLoggedIn')) {
                 window.location.href = 'login.html';
             }
-        });
+        }
+
+        // 页面加载时检查登录状态
+        window.onload = checkLogin;
+
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('username');
+            window.location.href = 'login.html';
+        }
     </script>
 </body>
 </html> 
