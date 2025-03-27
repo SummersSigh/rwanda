@@ -132,7 +132,7 @@ form button {
 }
 
 .sidebar nav ul li {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 8px 0;
     border-bottom: 1px solid #34495e;
     transition: all 0.3s ease;
@@ -160,6 +160,21 @@ form button {
 .sidebar nav ul li a.active {
     background-color: #3498db;
     color: white;
+}
+
+.logout-link {
+    color: #ff6b6b !important;
+    border-top: 1px solid #34495e;
+    margin-top: 5px;
+    text-align: left;
+    display: block;
+    width: 100%;
+    padding-left: 32px;
+}
+
+.logout-link:hover {
+    background-color: #ff6b6b !important;
+    color: white !important;
 }
 
 .main-content {
